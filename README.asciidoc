@@ -1,0 +1,3 @@
+= CodeJam Solutions
+
+Used includes are in http://github.lvv/scc
