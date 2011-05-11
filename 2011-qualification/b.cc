@@ -29,10 +29,7 @@ int main() {
 		}
 
 		_ "Case #",  t,  ": [";
-		for (size_t i=0;  i<s.size();  i++)  {
-			_ s[i];
-			if (!s.empty() && i !=s.size()-1) _ ", ";
-		}
-		__ "]";
+		FORi((int)s.size()-1) _ s[i], ", ";
+		__ s.back(), "]";
 	}
 }
