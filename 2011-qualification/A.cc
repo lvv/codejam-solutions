@@ -5,8 +5,7 @@ int main() {
 		vint	pos	{1,1};
 		vint	time	{0,0};
 		int	now	{0};
-
-		int	N(in);
+		int	N	(in);
 		REP (N) {
 			int  r= char(in)!='O';
 			int  p(in);
