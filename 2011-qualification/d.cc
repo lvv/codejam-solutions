@@ -6,7 +6,7 @@ int main() {
 		vint	V(N);	cin >> V;
 		vint	Vs(V); 	sort(V.bb, V.ee);
 		int	cnt=0;
-		FORi(N)  cnt += V[i] != Vs[i];
+		FORi(N)    cnt += V[i] != Vs[i];
 		__ "Case #", t, ": ", cnt;
 	}
 }
