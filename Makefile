@@ -25,7 +25,8 @@ Bs:  B
 Bl:  B
 	./B < B-large.in
 B.zip:	B.cc 
-	zip B.zip B.cc *.h
+	-rm B.zip
+	zip B.zip B.cc ~/p/scc/{simple,cj,matrix}.h
 
 #### C
 Ct:  C
