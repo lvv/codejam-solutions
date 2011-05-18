@@ -1,12 +1,9 @@
 #include <scc/cj.h>    // http://volnitsky.com/project/scc
 int main() {
-	int	T(in);
-	for (int t=1;  t<=T;  t++) {
-		vint	pos	{1,1};
-		vint	time	{0,0};
+	FORt(in) {
+		vint	pos	{1,1}, 	time	{0,0};
 		int	now	{0};
-		int	N	(in);
-		REP (N) {
+		REP (in) {
 			int  r= char(in)!='O';
 			int  p(in);
 			int  need_time = abs(pos[r]-p);
@@ -14,6 +11,6 @@ int main() {
 			time[r] = ++now;
 			pos[r] = p;
 		}			
-		__ "Case #",  t, ": ", now;
+		__ "Case #",  t+1, ": ", now;
 	}
 }

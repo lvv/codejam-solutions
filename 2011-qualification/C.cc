@@ -1,9 +1,8 @@
 #include<scc/cj.h>
 int main() {
-	int T(in);
-	for (int t=1;  t<=T;  t++) {
+	FORt(in) {
 		int	N(in);
-		vint	C(N);     cin >> C;
+		vint	C = in(N);
 		int	bad_sum = 0;
 		int	min_i = min_element(C.bb, C.ee) - C.bb;
 		int	sum = 0;
@@ -14,7 +13,7 @@ int main() {
 			sum += C[i];
 		}
 
-		_ "Case #", t,  ": ";  
+		_ "Case #", t+1,  ": ";  
 		if (bad_sum != C[min_i])	 __ "NO";
 		else				 __ sum;
 	}

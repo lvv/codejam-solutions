@@ -1,13 +1,12 @@
 #include <scc/cj.h>    // http://volnitsky.com/project/scc
 int main() {
-	int T(in);
-	for (int t=1;  t<=T;  t++) {
-		int C(in);  vS  vC(C);		cin >> vC;
-		int D(in);  vS  vD(D);		cin >> vD;
-		int N(in);  S   s(N, '+');	cin >> s;
+	FORt(in) {
+		vS  C = in(in);  
+		vS  D = in(in);
+		int N(in);    S  s(N, '+');  cin >> s;
 
-		FOR(i, 1, s.size()) {
-			for (auto c:vC) {
+		for (size_t i=1;  i<s.sz;  i++) {
+			for (auto c:C) {
 				if (
 					(s[i] == c[0]  &&  s[i-1] == c[1] ) ||
 					(s[i] == c[1]  &&  s[i-1] == c[0] ) 
@@ -17,7 +16,7 @@ int main() {
 				}
 			}
 
-			for (auto d:vD) {
+			for (auto d:D) {
 				size_t  p0 = find(s.bb, s.ee,  d[0]) - s.bb;
 				size_t  p1 = find(s.bb, s.ee,  d[1]) - s.bb;
 				size_t  p  = max(p0,p1);
@@ -28,8 +27,8 @@ int main() {
 			}
 		}
 
-		_ "Case #",  t,  ": [";
-		FORi((int)s.size()-1)  _ s[i], ", ";
-		__ s.back(), "]";
+		_ "Case #",  t+1,  ": [";
+		FORi(s.sz)  _ s[i], i<int(s.sz)-1 ? ", " : "";
+		__"]";
 	}
 }
