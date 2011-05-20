@@ -14,7 +14,7 @@ At:  A
 As:  A
 	./A < $(wildcard A-small-*.in) | tee out
 Al:  A
-	./A < A-large.in | tee out
+	./A < $(wildcard A-large-*.in) | tee out
 A.zip:	A.cc 
 	-rm -f A.zip
 	zip A.zip A.cc ~/p/scc/{simple,cj,matrix}.h
@@ -26,7 +26,7 @@ Bt:  B
 Bs:  B
 	./B < $(wildcard B-small-*.in) | tee out
 Bl:  B
-	./B < B-large.in | tee out
+	./B < $(wildcard B-large-*.in) | tee out
 B.zip:	B.cc 
 	-rm -f B.zip
 	zip B.zip B.cc ~/p/scc/{simple,cj,matrix}.h
@@ -35,17 +35,17 @@ B.zip:	B.cc
 Ct:  C
 	./C < C-test.in | tee out
 Cs:  C
-	./C < C-small-*.in | tee out
+	./C < $(wildcard C-small-*.in) | tee out
 Cl:  C
-	./C < C-large.in | tee out
+	./C < $(wildcard C-large-*.in) | tee out
 
 #### D
 Dt:  D
 	./D < D-test.in | tee out
 Ds:  D
-	./D < D-small-*.in | tee out
+	./D < $(wildcard D-small-*.in) | tee out
 Dl:  D
-	./D < D-large.in | tee out
+	./D < $(wildcard D-large-*.in) | tee out
 
 
 
