@@ -1,3 +1,6 @@
+Makefile
+out
+template.cc
 .*.zip
 A
 B
