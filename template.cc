@@ -1,12 +1,10 @@
-#include<scc/simple.h>
+#include<scc/cj.h>
 int main() {
-	long T(in);
-	for (long case_=1;  case_<=T;  case_++) {
-		cout << "Case #" << case_ << ": ";
-		long N(in);
+	FORt(in) {
+		
 
 
 
-		cout << endl;
+		__ "Case #", t+1, , ": "  , ..............................
 	}
 }

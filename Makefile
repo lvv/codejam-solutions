@@ -10,39 +10,42 @@ Al Bl Cl Dl : CXXFLAGS += -O3
 
 #### A
 At:  A
-	./A < A-test.in
+	./A < A-test.in | tee  out
 As:  A
-	./A < A-small-attempt0.in
+	./A < $(wildcard A-small-*.in) | tee out
 Al:  A
-	./A < A-large.in
+	./A < A-large.in | tee out
+A.zip:	A.cc 
+	-rm -f A.zip
+	zip A.zip A.cc ~/p/scc/{simple,cj,matrix}.h
 
 
 #### B
 Bt:  B
-	./B < B-test.in
+	./B < B-test.in | tee out
 Bs:  B
-	./B < B-small-attempt0.in
+	./B < $(wildcard B-small-*.in) | tee out
 Bl:  B
-	./B < B-large.in
+	./B < B-large.in | tee out
 B.zip:	B.cc 
-	-rm B.zip
+	-rm -f B.zip
 	zip B.zip B.cc ~/p/scc/{simple,cj,matrix}.h
 
 #### C
 Ct:  C
-	./C < C-test.in
+	./C < C-test.in | tee out
 Cs:  C
-	./C < C-small-attempt0.in
+	./C < C-small-*.in | tee out
 Cl:  C
-	./C < C-large.in
+	./C < C-large.in | tee out
 
 #### D
 Dt:  D
-	./D < D-test.in
+	./D < D-test.in | tee out
 Ds:  D
-	./D < D-small-attempt0.in
+	./D < D-small-*.in | tee out
 Dl:  D
-	./D < D-large.in
+	./D < D-large.in | tee out
 
 
 
