@@ -17,7 +17,7 @@ Al:  A
 	./A < $(wildcard A-large-*.in) | tee out
 A.zip:	A.cc 
 	-rm -f A.zip
-	zip A.zip A.cc ~/p/scc/{simple,cj,matrix}.h
+	zip --junk-paths A.zip A.cc ~/p/scc/{simple,cj,matrix}.h ~/p/lvvlib/memoize.h 
 
 
 #### B
@@ -29,7 +29,7 @@ Bl:  B
 	./B < $(wildcard B-large-*.in) | tee out
 B.zip:	B.cc 
 	-rm -f B.zip
-	zip B.zip B.cc ~/p/scc/{simple,cj,matrix}.h
+	zip --junk-paths B.zip B.cc ~/p/scc/{simple,cj,matrix}.h ~/p/lvvlib/memoize.h
 
 #### C
 Ct:  C
@@ -38,6 +38,9 @@ Cs:  C
 	./C < $(wildcard C-small-*.in) | tee out
 Cl:  C
 	./C < $(wildcard C-large-*.in) | tee out
+C.zip:	C.cc 
+	-rm -f C.zip
+	zip  --junk-paths C.zip C.cc ~/p/scc/{simple,cj,matrix}.h ~/p/lvvlib/memoize.h
 
 #### D
 Dt:  D
@@ -46,6 +49,9 @@ Ds:  D
 	./D < $(wildcard D-small-*.in) | tee out
 Dl:  D
 	./D < $(wildcard D-large-*.in) | tee out
+D.zip:	D.cc 
+	-rm -f D.zip
+	zip  --junk-paths D.zip D.cc ~/p/scc/{simple,cj,matrix}.h ~/p/lvvlib/memoize.h
 
 
 
